@@ -1,7 +1,11 @@
 module.exports = function (config) {
   config.set({
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['browserify', 'mocha', 'chai'],
     files: ['src/**/*.js', 'test/**/*.js'],
+    preprocessors: {
+      'src/**/*.js': ['browserify'],
+      'test/**/*.js': ['browserify']
+    },
     reporters: ['progress'],
     port: 9876,  // karma web server port
     colors: true,

@@ -1,3 +1,6 @@
+var add = require('../src/code.js').add;
+var sub = require('../src/sub.js').sub;
+
 describe('add', function () {
   it('add 1 + 2', function () {
     assert.equal(add(1, 2), 3);
